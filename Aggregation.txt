@@ -1,0 +1,75 @@
+package Aggr;
+
+//import Aggr.Department;
+//import Aggr.Teacher;
+
+class Teacher
+{
+	private String name;
+	public Teacher(String name)
+	{
+		this.name=name;
+	}
+	public String getName()
+	{
+		return name;
+	}
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+
+	public void work()
+	{
+		System.out.println("Teacher is working");
+	}
+}
+
+class Department
+{
+	private Teacher t;
+	private String dname;
+	public	Department(String dname)
+	{
+		t=null;
+		this.dname=dname;
+	}
+	public String getDname()
+	{
+		return dname;
+	}
+	public void addTeacher(Teacher t)
+	{
+		this.t=t;
+	}
+	public void perform()
+	{
+		System.out.println(dname+"\t");
+		t.work();
+	}
+}
+
+public class AggreagtionDemo
+{
+	public static void main(String[] args)
+	{
+		Department sd=new Department("Science Department");
+		System.out.println(sd.getDname());
+		Teacher t1=new Teacher("AtulSir");
+		System.out.println(t1.getName());
+		sd.addTeacher(t1);
+		sd.perform();
+		
+		/*
+		System.out.println("Lets close the maths department");
+		md=null;  // delete maths department
+		System.out.println(t1.getName()+" still exists and can join some other department");
+		sd.addTeacher(t1);
+		sd.perform();
+		// ..... after some time ......
+		sd=null;  //delete science department
+		System.out.println(t1.getName()+" still exists and can join some other department");
+		*/
+	}
+
+}
