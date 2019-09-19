@@ -1,0 +1,54 @@
+/*Go for Hierarchical inheritance, create instances of child 
+ * class and observe constructor invocation*/
+
+
+package ss;
+class Animal
+{
+	
+	public Animal(int a) 
+			{
+		System.out.println("Animal Constructor");
+			}
+
+	void Walk()
+	{
+		System.out.println("Walking");
+	}
+}
+class Dog extends Animal
+{
+	
+	public Dog() 
+	{ 
+		super(7);
+		System.out.println("Dog Constructor");
+	}
+	void Sound()
+	{
+		System.out.println("Bark");
+	}
+}
+class Cat extends Animal
+{
+	
+	public Cat() 
+	{
+		super(7);
+		System.out.println("Cat Constructor");
+	}
+	void Sound()
+	{
+		System.out.println("Mewoo");
+	}
+}
+public class Set
+{
+	public static void main(String[] args)
+	{
+		Dog g = new Dog();
+		g.Walk();
+		g.Sound();
+		
+	}
+}

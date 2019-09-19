@@ -1,0 +1,44 @@
+/*Create a class "Top1" with "disp1()" method.
+From this class Derive "Bottom1", "Bottom2" and "Bottom3" classes ,override the "disp1()".
+Now show how will u achieve dynamic polymorphism.*/
+
+package ss;
+
+class Top1
+{
+	void disp1()
+	{
+		System.out.println("Top1 Display");
+	}
+}
+class Bottom1 extends Top1
+{
+	void disp1()
+	{
+		System.out.println("Bottom1 Display");	
+	}
+}
+class Bottom2 extends Top1
+{
+	void disp1()
+	{
+		System.out.println("Bottom2 Display");
+	}
+}
+class Bottom3 extends Top1
+{
+	void disp1()
+	{
+		System.out.println("Bottom3 Display");	
+	}
+}
+
+public class Set
+{
+	public static void main(String args[])
+	{
+		
+		Bottom1 t = new Bottom1();
+		t.disp1();
+	}
+}

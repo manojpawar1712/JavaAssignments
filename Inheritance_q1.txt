@@ -1,0 +1,53 @@
+/*Create a multi-level inheritance , instantiate the child class and 
+ * observe constructor invocation.Also show, if needed how will u invoke parent class
+ *  constructor from child class ?
+ */
+class Parent
+{
+	
+	Parent()
+	{
+		System.out.println("Parent no arg const");
+	}
+	Parent(int a)
+	{
+		System.out.println("Parent one arg const");
+	}
+	
+}
+class Child extends Parent
+{
+	Child()
+	{
+		System.out.println("Child no arg const");
+	}
+	Child(int a)
+	{
+		super(6);
+		System.out.println("Child One arg const");
+	}
+}
+class Grandchild extends Child
+{
+	Grandchild()
+	{
+		System.out.println("Grandchild no arg cons");
+	}
+	Grandchild(int a)
+	{
+		super(2);
+		System.out.println("Grandchild one arg const");
+	}
+
+}
+
+public class Sample 
+{
+
+	public static void main(String[] args) 
+	{
+		Grandchild g=new Grandchild(5);
+
+	}
+
+}

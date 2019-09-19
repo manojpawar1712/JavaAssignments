@@ -1,0 +1,45 @@
+/*8) Define a class "base1" with only parameterized constructor.
+Derive a class "sub1" from "base1". This class should have following constructors
+	a) Default
+	b) one parameter
+	c) two parameter
+Now try to instantiate "sub1" , using any of the above mentioned constructors.
+*/
+package ss;
+
+class Base1
+{
+	public Base1(int a)
+	{
+		System.out.println("Param const");
+	}
+}
+class Sub1 extends Base1
+{
+	public Sub1() 
+	{
+		super(2);
+	System.out.println("Default sub1");
+	}
+	
+	public Sub1(int a) 
+	{
+		super(2);
+		System.out.println("1 Param Sub1");
+	}
+	
+	public Sub1(int a,int b) 
+	{
+		super(2);
+		System.out.println("2 Param Sub1");
+	}
+}
+
+class Child
+{
+	public static void main(String argsp[])
+	{
+		Sub1 s=new Sub1(2,1);
+	}
+	
+}
